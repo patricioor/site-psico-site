@@ -1,0 +1,32 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  .apresentation-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    width: 70%; /* Limita a largura do container a 70% da tela */
+    max-width: 1200px; /* Define um limite máximo de largura, opcional */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 20px; /* Espaçamento interno, ajustável conforme necessário */
+    box-sizing: border-box;
+
+    .apresentation-text{
+      text-align: left;
+      margin-right: 2rem;
+      width: 70%;
+      height: 50%;
+    }
+
+    img{
+      width: 70%;
+      height: 50%;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+<app-header
+  title="Mara Psicopedagoga"
+  subtitle="Bem-vindo ao site da Mara!"
+  text="Site para direcionamento de pacientes"
+  primaryBtnText = "Home"
+  secondaryBtnText = "Sobre"
+  tertiaryBtnText = "Serviços"
+  quaternaryBtnText = "Contato"
+  quinaryBtnText = "Depoimentos"
+  senaryBtnText = "Blog"
+  (navigate)="navigateHome()"
+  (navigate)="navigateAbout()"
+  (navigate)="navigateServices()"
+  (navigate)="navigateContact()"
+  (navigate)="navigateTestimonials()"
+  (navigate)="navigateBlog()"
+></app-header>
+<main>
+  <div class="apresentation-section">
+    <div class="img-apresentantion">
+      <img src="assets/png/apresentation-photo1.jpeg" alt="logo">
+    </div>
+    <div class="apresentation-text">
+      <h2>Bem-vindo ao meu consultório, aqui você será bem acolhido!</h2>
+      <p>A Jornada da Terapia Emocional" oferece uma reflexão profunda sobre
+        o poder da autoexploração e o impacto do cuidado emocional no bem-estar.
+        A obra explora como a terapia emocional ajuda as pessoas a compreenderem
+        suas emoções, superarem traumas e desenvolverem resiliência diante dos desafios da vida.
+        Com exemplos práticos e depoimentos reais, o autor destaca a importância de criar um espaço seguro
+        para expressar sentimentos, reconhecendo que o crescimento emocional é um processo contínuo.
+        Uma leitura esclarecedora para quem deseja entender mais sobre si mesmo e melhorar sua saúde mental por meio da terapia.
+      </p>
+    </div>
+  </div>
+</main>
+<app-footer></app-footer>
