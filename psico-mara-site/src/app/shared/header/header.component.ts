@@ -12,8 +12,6 @@ import {NgOptimizedImage} from "@angular/common";
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
-
   @Input() title: string = '';
   @Input() subtitle: string = '';
   @Input() text: string = '';

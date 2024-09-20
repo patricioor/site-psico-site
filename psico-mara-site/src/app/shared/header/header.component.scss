@@ -1,26 +1,38 @@
 @import "../../../styles/variables";
 
 .header-section {
+  position: relative;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  width: 70%; /* Limita a largura do container a 70% da tela */
-  max-width: 1200px; /* Define um limite máximo de largura, opcional */
-  margin: 0 auto; /* Centraliza o container horizontalmente */
+  padding-inline: 20rem;
+  width: 100%;
+  height: 6rem;
+  margin: 0 auto;
   box-sizing: border-box;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  background: #dbaca3;
 
   img {
-    width: 160px;
-    height: 120px;
+    width: 65px;
+    height: 50px;
+    background: #dbaca3;
   }
 
+  .button-homepage{
+    display: flex;
+    gap: 10px;
+    background: #dbaca3;
+  }
   button{
-    border: none;
-    font-size: 20px;
-    background-color: transparent;
-    font-weight: 400;
-    padding: 20px;
+    font-size: 14px;
+    background-color: #dbaca3;
+    padding: 10px;
+    font-weight: bold;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
   }
 
   button:hover {

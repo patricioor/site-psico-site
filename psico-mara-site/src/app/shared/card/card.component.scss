@@ -1,0 +1,19 @@
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  border: 2px solid #dbaca3;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
+
+  p{
+    text-align: justify;
+  }
+  img {
+    color: white;
+  }
+}
