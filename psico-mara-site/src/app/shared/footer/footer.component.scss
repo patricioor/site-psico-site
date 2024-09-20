@@ -1,0 +1,29 @@
+@import "../../../styles/variables";
+
+
+main {
+  width: 70%; /* Limita a largura do container a 70% da tela */
+  max-width: 1200px; /* Define um limite máximo de largura, opcional */
+  margin: 0 auto; /* Centraliza o container horizontalmente */
+  padding: 20px; /* Espaçamento interno, ajustável conforme necessário */
+  box-sizing: border-box;
+
+  .text-container{
+    text-align: right;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+
+    div {
+      flex-grow: 1;
+      height: 2px;
+      background-color: $gray-bg;
+    }
+  }
+}
+

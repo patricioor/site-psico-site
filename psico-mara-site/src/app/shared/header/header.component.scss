@@ -1,0 +1,45 @@
+@import "../../../styles/variables";
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 70%; /* Limita a largura do container a 70% da tela */
+  max-width: 1200px; /* Define um limite máximo de largura, opcional */
+  margin: 0 auto; /* Centraliza o container horizontalmente */
+  box-sizing: border-box;
+
+  img {
+    width: 160px;
+    height: 120px;
+  }
+
+  button{
+    border: none;
+    font-size: 20px;
+    background-color: transparent;
+    font-weight: 400;
+    padding: 20px;
+  }
+
+  button:hover {
+    opacity: 0.5;
+    text-decoration: black;
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+
+  div {
+    flex-grow: 1;
+    height: 2px;
+    background-color: $gray-bg;
+  }
+}
+
