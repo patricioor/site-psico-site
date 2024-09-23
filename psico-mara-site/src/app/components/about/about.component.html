@@ -1,1 +1,144 @@
-<p>about works!</p>
+<section id="section1" class="home-section">
+  <button class="whatsapp-button">
+    <a
+      target="_blank"
+      href="https://api.whatsapp.com/send?phone=5521988249268&text=Olá, Ciomara! Vi seu site e gostaria de saber mais sobre seu trabalho."
+      rel="noopener noreferrer"
+      aria-label="Entre em contato pelo WhatsApp"
+    >
+      <img
+        src="https://img.icons8.com/?size=100&id=30448&format=png&color=000000"
+        alt="Ícone do WhatsApp"
+      />
+    </a>
+  </button>
+</section>
+
+<app-header
+  primaryBtnText="Home"
+  secondaryBtnText="Sobre"
+  tertiaryBtnText="Serviços"
+  quaternaryBtnText="Contato"
+  quinaryBtnText="Depoimentos"
+  senaryBtnText="Conheça a TRG"
+  (navigate)="navigateTestimonials()"
+  (navigate)="navigateBlog()"
+></app-header>
+
+<main>
+  <div id="section2" class="apresentation-section">
+    <div class="img-apresentantion">
+      <img
+        src="assets/png/apresentation-photo1.jpeg"
+        alt="Foto de apresentação"
+      />
+    </div>
+    <div class="apresentation-text">
+      <h2>Bem-vindo ao meu consultório, aqui você será bem acolhido!</h2>
+      <p>
+        Bem-vindo ao seu espaço de cura emocional. Aqui, você encontrará um ambiente seguro e acolhedor para explorar e transformar suas emoções.
+        Sou Ciomara Osterno, terapeuta especializada em Terapia de Reprocessamento Generativo (TRG), focada em ajudá-lo a superar conflitos emocionais
+        e a descobrir uma versão mais saudável e plena de si mesmo.
+      </p>
+
+      <p>
+        Tenho uma sólida formação em Letras – Licenciatura Plena pela UECE (Universidade Estadual do Ceará), e sou pós-graduada em Psicopedagogia Clínica
+        e Institucional pela Universidade Vale do Acaraú (UVA). Além disso, sou certificada como Terapeuta de Alta Performance Mental (TAPM) pela UNIFAST.
+        Minha especialização em Transtornos Emocionais, Leitura Corporal e Comportamental pelo Instituto Brasileiro de Formação de Terapeutas (IBFT)
+        me permite oferecer uma abordagem terapêutica profunda e eficaz.
+      </p>
+
+      <p>
+        A Terapia de Reprocessamento Generativo é uma terapia breve, focada na resolução de problemas emocionais e psicossomáticos, atuando diretamente
+        nas raízes de traumas, fobias, compulsões, ansiedade, depressão e crises de pânico. Meu compromisso é guiar você no processo de libertação emocional,
+        proporcionando o suporte necessário para que alcance o equilíbrio e a paz interior.
+      </p>
+
+      <p>
+        Neste espaço, você encontrará ferramentas e conteúdos que contribuirão para o seu desenvolvimento pessoal. Não se esqueça de me seguir nas redes sociais,
+        onde compartilho mais insights e reflexões sobre a jornada de cura emocional. Estou aqui para ajudá-lo a trilhar um caminho de transformação e bem-estar.
+      </p>
+      <div class="prof-name">Ciomara O. Martins</div>
+      <div class="prof-description">
+        Terapeuta Emocional TRG
+        <br />
+        CITRG: 10.952
+      </div>
+    </div>
+  </div>
+
+  <div id="section3" class="cards-section">
+    <h2>Atendimentos</h2>
+    <ul>
+      <li>
+        <app-card
+          title="Sentido, Mudança e Direção"
+          description="Através de sessões Online você terá todo o apoio, sigilo e segurança para receber o tratamento que precisa e merece. Buscar sentido em meio ao nada é o que vou te ajudar a fazer, para encontrar a mudança que você precisa e ter a direção que é necessária para sua vida."
+        ></app-card>
+      </li>
+      <li>
+        <app-card
+          title="Ansiedade"
+          description=
+            "Pensamento acelerado, falta de ar, pânico, dores de cabeça e no corpo, insônia, coração acelerado, alergias no corpo, etc.
+             Vou te conduzir a tratar esses e outros sintomas, e assim que você vai lidar de forma mais saudável com tudo isso.
+             Consciente, independente e de forma consistente."
+        ></app-card>
+      </li>
+      <li>
+        <app-card
+          title="Depressão"
+          description="Angústia profunda, baixa-autoestima, desânimo, choro frequente, traumas, tendência a suicídio, pensamentos ruins que te fazem mal, etc.
+A Depressão pode querer acabar com você, mas sua atitude de procurar ajuda pode acabar com ela, e tudo isso que está te fazendo sofrer."
+        ></app-card>
+      </li>
+      <li>
+        <app-card
+          title="Psicoterapia Existencial"
+          description="Aqui você vai ter mais autonomia e independência emocional – na
+psicoterapia você receber ajuda para lidar com os problemas da vida, compreender suas emoções e saber o que fazer diante do que se passa em sua mente."
+        ></app-card>
+      </li>
+    </ul>
+  </div>
+
+  <div id="section4" class="address-section">
+    <h2>Atendimento online e presencial</h2>
+    <div class="list-section">
+      <ul>
+        <li>
+          <div class="address-container">
+            <img
+              src="https://img.icons8.com/?size=100&id=2436&format=png&color=000000"
+              alt="Localização presencial"
+            />
+            <span>Presencial: Niterói - Rio de Janeiro</span>
+          </div>
+          <div class="address-container">
+            <img
+              src="https://img.icons8.com/?size=100&id=CTL6fNPxvJku&format=png&color=000000"
+              alt="Atendimento online"
+            />
+            <span>Online: Google Meet</span>
+          </div>
+          <div class="address-container">
+            <img
+              src="https://img.icons8.com/?size=100&id=RhkKQFp4TrwF&format=png&color=000000"
+              alt="Horários de atendimento"
+            />
+            <span>Horários: Segunda a Sexta-feira, 8 às 20 h</span>
+          </div>
+          <div class="address-container">
+            <img
+              src="https://img.icons8.com/?size=100&id=23&format=png&color=000000"
+              alt="Atendimento com hora marcada"
+            />
+            <span>Somente com hora marcada</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<app-footer></app-footer>

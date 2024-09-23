@@ -1,12 +1,22 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Router} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 import {NgOptimizedImage} from "@angular/common";
+import {MatButton} from "@angular/material/button";
+import {MatToolbar} from "@angular/material/toolbar";
+import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
+import {window} from "rxjs";
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
-    NgOptimizedImage
+    NgOptimizedImage,
+    MatButton,
+    MatToolbar,
+    MatMenuTrigger,
+    MatMenu,
+    MatMenuItem,
+    RouterLink
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
@@ -51,4 +61,5 @@ export class HeaderComponent {
     this.router.navigate(["blog"])
   }
 
+  protected readonly window = window;
 }

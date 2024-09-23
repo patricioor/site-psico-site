@@ -1,57 +1,119 @@
-@import "../../../styles/variables";
-
 .header-section {
   position: relative;
   z-index: 10;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  padding-inline: 20rem;
+  justify-content: center;
+  height: 8rem;
   width: 100%;
-  height: 6rem;
   margin: 0 auto;
   box-sizing: border-box;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   background: #dbaca3;
+  padding-inline: 7rem;
 
   img {
-    width: 65px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
     background: #dbaca3;
-  }
-
-  .button-homepage{
-    display: flex;
-    gap: 10px;
-    background: #dbaca3;
-  }
-  button{
-    font-size: 14px;
-    background-color: #dbaca3;
-    padding: 10px;
-    font-weight: bold;
-    color: black;
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 40px;
+  }
+  .mobile-menu{
+    visibility: visible;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: end;
+    background: #dbaca3;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      background: #dbaca3;
+      font-weight: bold;
+      color: black;
+      img {
+        width: 40px;
+        height: 40px;
+        border: 2px solid black;
+        border-radius: 10px;
+      }
+    }
   }
 
-  button:hover {
-    opacity: 0.5;
-    text-decoration: black;
+  .desktop-menu {
+    visibility: hidden;
   }
 }
 
-.divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  width: 100%;
+@media (min-width: 768px) and (max-width: 1023px) {
 
-  div {
-    flex-grow: 1;
-    height: 2px;
-    background-color: $gray-bg;
-  }
 }
 
+@media (min-width: 1024px) {
+  .header-section {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 25rem;
+    width: 100%;
+    height: 6rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    background: #dbaca3;
+
+    img {
+      width: 65px;
+      height: 50px;
+      background: #dbaca3;
+    }
+
+    .button-homepage {
+      display: flex;
+      background: #dbaca3;
+
+      .desktop-menu {
+        visibility: visible;
+        background: #dbaca3;
+
+        button {
+          display: inline-block;
+          border: none;
+          font-size: 14px;
+          background: #dbaca3;
+          font-weight: bold;
+          color: black;
+          position: relative;
+        }
+
+        button::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          background-color: black;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.3s ease;
+        }
+
+        button:hover::after {
+          transform: scaleX(1);
+        }
+      }
+
+      .mobile-menu {
+        visibility: hidden;
+      }
+    }
+  }
+}
