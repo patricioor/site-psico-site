@@ -1,1 +1,103 @@
-<p>blog works!</p>
+<app-header
+  primaryBtnText="Home"
+  secondaryBtnText="Sobre"
+  tertiaryBtnText="Serviços"
+  quaternaryBtnText="Contato"
+  quinaryBtnText="Depoimentos"
+  senaryBtnText="Conheça a TRG"
+  (navigate)="navigateTestimonials()"
+  (navigate)="navigateBlog()"></app-header>
+<main>
+  <img src="assets/svg/logo.png">
+
+  <div class="trg-section">
+    <h2>
+      Conheça a "TRG"
+    </h2>
+    <h4>
+      Terapia de Reprocessamento Generativo
+    </h4>
+
+    <h4>
+      Quais os seus benefícios?
+    </h4>
+    <ul>
+      <li>Terapia rápida e eficaz;</li>
+      <li>Resultados na primeira sessão;</li>
+      <li>Além de tratar as dores emocionais, liberas as dores psicossomáticas;</li>
+      <li>Eficiente para tratar problemas emocionais, como ansiedade, tristeza, depressão e medos.</li>
+    </ul>
+  </div>
+  <div class="how-section">
+    <h2>Como funciona a TRG?</h2>
+    <ul>
+      <li>
+        <h4>
+          Passo 1: Reprocessamento de Lembranças Traumáticas
+        </h4>
+        <p>
+          <span>Objetivo:</span> Trabalhar todos os eventos traumáticos ou lembranças ruins que
+          o paciente consegue lembrar, desde a infância até a idade atual.
+        </p>
+        <p>
+          <span>Como Funciona:</span> Durante o reprocessamento dessas memórias, são liberadas
+          todas as tensões, emoções e dores presas no corpo.
+        </p>
+      </li>
+      <li>
+        <h4>
+          Passo 2: Método Temático
+        </h4>
+        <p>
+          <span>Objetivo:</span> Reprocessar traumas relacionados a temas específicos escolhidos pelo cliente.
+        </p>
+        <p>
+          <span>Como Funciona:</span> Os temas podem incluir sentimentos de abandono, humilhação, traição,
+          rejeição, entre outros. O cliente seleciona os tópicos que deseja abordar, e o
+          terapeuta trabalha cada um deles de forma direcionada.
+        </p>
+      </li>
+      <li>
+        <h4>
+          Passo 3: Método Futuro
+        </h4>
+        <p>
+          <span>Objetivo:</span> Abordar medos relacionados ao futuro do cliente.
+        </p>
+        <p>
+          <span>Como Funciona:</span> São trabalhados medos como o de morte, pobreza,
+          doenças e outras preocupações futuras que o cliente possa ter.
+        </p>
+      </li>
+      <li>
+        <h4>
+          Passo 4: Método de Potencialização
+        </h4>
+        <p>
+          <span>Objetivo:</span> Construir e potencializar o futuro ideal do cliente.
+        </p>
+        <p>
+          <span>Como Funciona:</span> Nessa etapa, o foco é ajudar o cliente a planejar
+          e visualizar como alcançar o futuro desejado, eliminando bloqueios
+          que possam atrapalhar esse caminho.
+        </p>
+      </li>
+      <li>
+        <h4>
+          Para quem a técnica da TRG é indicada?
+        </h4>
+        <p>
+          <span>Faixa etária:</span> A TRG pode ser aplicada
+          em crianças a partir de 8 anos, adolescentes, adultos e idosos.
+        </p>
+        <p>
+          <span>Indicação Específica:</span> Ideal para pessoas que não querem ou não
+          se sentem à vontade em expor seus traumas ou sentimentos, uma
+          vez que a terapeuta não precisa saber dos detalhes. É especialmente
+          eficaz para indivíduos tímidos e introspectivos.
+        </p>
+      </li>
+    </ul>
+  </div>
+</main>
+<app-footer></app-footer>
