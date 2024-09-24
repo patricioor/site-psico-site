@@ -2,7 +2,6 @@
   position: relative;
   z-index: 10;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   height: 8rem;
@@ -11,42 +10,37 @@
   box-sizing: border-box;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   background: #dbaca3;
-  padding-inline: 7rem;
 
-  img {
-    width: 90px;
-    height: 90px;
-    background: #dbaca3;
-    border: 2px solid black;
-    border-radius: 40px;
-  }
   .mobile-menu{
-    visibility: visible;
     display: flex;
-    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: end;
     background: #dbaca3;
 
-    button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 14px;
-      background: #dbaca3;
-      font-weight: bold;
-      color: black;
-      img {
-        width: 40px;
-        height: 40px;
-        border: 2px solid black;
-        border-radius: 10px;
+    .logo-header {
+      button{
+        img{
+          height: 30%;
+          width: 60%;
+        }
+      }
+    }
+    .menu-header {
+      button {
+        img {
+          height: 40%;
+          width: 40%;
+        }
       }
     }
   }
 
   .desktop-menu {
     visibility: hidden;
+    height: 0;
+    width: 0;
   }
 }
 
@@ -56,64 +50,36 @@
 
 @media (min-width: 1024px) {
   .header-section {
-    position: fixed;
     z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline: 25rem;
     width: 100%;
-    height: 6rem;
+    height: 7rem;
     margin: 0 auto;
     box-sizing: border-box;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     background: #dbaca3;
 
-    img {
-      width: 65px;
-      height: 50px;
-      background: #dbaca3;
+    .desktop-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      visibility: visible;
+      gap: 35rem;
+
+      img{
+        height: 70px;
+        width: 140px;
+      }
+      .buttons-header{
+        font-weight: 700;
+      }
     }
 
-    .button-homepage {
-      display: flex;
-      background: #dbaca3;
-
-      .desktop-menu {
-        visibility: visible;
-        background: #dbaca3;
-
-        button {
-          display: inline-block;
-          border: none;
-          font-size: 14px;
-          background: #dbaca3;
-          font-weight: bold;
-          color: black;
-          position: relative;
-        }
-
-        button::after {
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          height: 2px;
-          background-color: black;
-          transform: scaleX(0);
-          transform-origin: left;
-          transition: transform 0.3s ease;
-        }
-
-        button:hover::after {
-          transform: scaleX(1);
-        }
-      }
-
-      .mobile-menu {
-        visibility: hidden;
-      }
+    .mobile-menu {
+      visibility: hidden;
+      height: 0;
+      width: 0;
     }
   }
 }
+
+

@@ -1,17 +1,30 @@
 <main>
   <section class="header-section">
-    <img src="assets/svg/logo.png">
-      <mat-toolbar class="desktop-menu">
-        <button mat-button (click)="navigateAbout()"> {{ secondaryBtnText }} </button>
-        <button mat-button (click)="navigateTestimonials()"> {{ quaternaryBtnText }} </button>
-        <button mat-button (click)="navigateBlog()"> {{ senaryBtnText }} </button>
-      </mat-toolbar>
-
-      <mat-toolbar class="mobile-menu">
-        <button mat-button [matMenuTriggerFor]="menu">
-          <img src="https://img.icons8.com/?size=100&id=59832&format=png&color=000000">
+    <mat-toolbar class="desktop-menu">
+      <div class="logo-header">
+        <button mat-menu-item [routerLink]="['/about']" fragment="section1">
+          <img src="assets/svg/logo1.png">
         </button>
-      </mat-toolbar>
+      </div>
+      <div class="buttons-header">
+         <button mat-button (click)="navigateAbout()"> {{ secondaryBtnText }} </button>
+         <button mat-button (click)="navigateTestimonials()"> {{ quinaryBtnText }} </button>
+         <button mat-button (click)="navigateBlog()"> {{ senaryBtnText }} </button>
+      </div>
+    </mat-toolbar>
+
+    <mat-toolbar class="mobile-menu">
+      <div class="logo-header">
+        <button mat-menu-item [routerLink]="['/about']" fragment="section1">
+          <img src="assets/svg/logo1.png">
+        </button>
+      </div>
+      <div class="menu-header">
+        <button mat-button [matMenuTriggerFor]="menu">
+          <img src="https://img.icons8.com/?size=100&id=82749&format=png&color=000000">
+        </button>
+      </div>
+    </mat-toolbar>
     <mat-menu #menu="matMenu">
       <button mat-menu-item [routerLink]="['/about']" fragment="section1"> {{ primaryBtnText }} </button>
       <button mat-menu-item [routerLink]="['/about']" fragment="section2"> {{ secondaryBtnText }} </button>
