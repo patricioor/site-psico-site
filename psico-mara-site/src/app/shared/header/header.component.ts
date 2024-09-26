@@ -33,6 +33,11 @@ export class HeaderComponent {
   @Input() senaryBtnText: string = "";
   @Output("navigate") onNavigate = new EventEmitter();
 
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 
   constructor(private router: Router) {
   }

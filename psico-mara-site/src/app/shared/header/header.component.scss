@@ -71,7 +71,21 @@
       }
       .buttons-header{
         font-weight: 700;
+        button {
+          font-size: 16px;
+          background-color: #dbaca3;
+          color: black;
+          border: 2px solid transparent;
+          transition: border 0.2s ease-in-out;
+          transition-delay: 0.3s;
+        }
+        button:hover {
+          border: 2px solid black;
+          transition-delay: 0s;
+        }
       }
+
+
     }
 
     .mobile-menu {
