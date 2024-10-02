@@ -29,6 +29,7 @@
     }
     .menu-header {
       button {
+        color: #f0e6df;
         img {
           height: 40%;
           width: 40%;
@@ -74,18 +75,16 @@
         button {
           font-size: 16px;
           background-color: #dbaca3;
-          color: black;
+          color: #f0e6df;
           border: 2px solid transparent;
           transition: border 0.2s ease-in-out;
           transition-delay: 0.3s;
         }
         button:hover {
-          border: 2px solid black;
+          border: 2px solid #f0e6df;
           transition-delay: 0s;
         }
       }
-
-
     }
 
     .mobile-menu {
