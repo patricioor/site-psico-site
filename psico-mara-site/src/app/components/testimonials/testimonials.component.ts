@@ -21,6 +21,10 @@ export class TestimonialsComponent {
     this.router.navigate(["testimonials"]);
   }
 
+  navigateService(): void {
+    this.router.navigate(["service"]);
+  }
+
   navigateBlog(): void {
     this.router.navigate(["blog"]);
   }

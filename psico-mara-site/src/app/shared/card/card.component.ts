@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-card',
@@ -10,4 +11,11 @@ import {Component, Input} from '@angular/core';
 export class CardComponent {
   @Input() title: string = '';
   @Input() description: string = '';
+
+  constructor(private router:Router) {
+  }
+
+  navigateService(): void {
+    this.router.navigate(["service"]);
+  }
 }

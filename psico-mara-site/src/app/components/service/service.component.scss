@@ -1,0 +1,118 @@
+@media (max-width: 767px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 30px;
+    color: #dbaca3;
+
+    h2 {
+      padding-top: 30px;
+    }
+
+    .resenha-section {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      padding-block: 30px;
+
+      .photo-resenha {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 30px;
+
+        img {
+          border: 2px solid #dbaca3;
+          border-radius: 15px;
+          width: 80%;
+          margin-bottom: 15px;
+        }
+      }
+
+      .text-resenha {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+      }
+    }
+
+    .service-container {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: justify;
+
+      h2 {
+        padding-bottom: 15px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+@media (min-width: 1024px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 30px;
+    color: #dbaca3;
+
+    h2 {
+      padding-top: 30px;
+    }
+
+    .resenha-section {
+      display: flex;
+      flex-direction: row;
+      width: 80%;
+      padding-block: 30px;
+
+      .photo-resenha {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin-left: 30px;
+
+        img {
+          border: 2px solid #dbaca3;
+          border-radius: 15px;
+          margin-left: 70px;
+          width: 40%;
+        }
+      }
+
+      .text-resenha {
+        display: flex;
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+      }
+    }
+
+    .service-container {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: justify;
+
+      h2 {
+        padding-bottom: 15px;
+      }
+    }
+  }
+}

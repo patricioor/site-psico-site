@@ -31,6 +31,8 @@ export class HeaderComponent {
   @Input() quaternaryBtnText: string = "";
   @Input() quinaryBtnText: string = "";
   @Input() senaryBtnText: string = "";
+  @Input() septnaryBtnText: string = "";
+
   @Output("navigate") onNavigate = new EventEmitter();
 
   isMenuOpen = false;
@@ -50,7 +52,7 @@ export class HeaderComponent {
     this.router.navigate(["about"])
   }
 
-  navigateServices() {
+  navigateService() {
     this.router.navigate(["services"])
   }
 

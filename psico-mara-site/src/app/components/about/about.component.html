@@ -17,11 +17,13 @@
 <app-header
   primaryBtnText="Home"
   secondaryBtnText="Sobre"
-  tertiaryBtnText="Serviços"
+  tertiaryBtnText="Atendimentos"
   quaternaryBtnText="Contato"
   quinaryBtnText="Depoimentos"
   senaryBtnText="Conheça a TRG"
+  septnaryBtnText="Serviços"
   (navigate)="navigateTestimonials()"
+  (navigate)="navigateService()"
   (navigate)="navigateBlog()"
 ></app-header>
 
@@ -76,34 +78,32 @@
     <ul>
       <li>
         <app-card
-          title="Sentido, Mudança e Direção"
-          description="Através de sessões Online você terá todo o apoio, sigilo e segurança para receber o tratamento que precisa e merece. Buscar sentido em meio ao nada é o que vou te ajudar a fazer, para encontrar a mudança que você precisa e ter a direção que é necessária para sua vida."
+          title="Autoestima e Autoconfiança"
+          description=
+            "Fortaleça sua autoestima e autoconfiança. Através de técnicas de autoconhecimento, você irá resgatar seu valor pessoal, desenvolver segurança para enfrentar desafios e viver com mais autenticidade."
         ></app-card>
       </li>
       <li>
         <app-card
-          title="Ansiedade"
-          description=
-            "Pensamento acelerado, falta de ar, pânico, dores de cabeça e no corpo, insônia, coração acelerado, alergias no corpo, etc.
-             Vou te conduzir a tratar esses e outros sintomas, e assim que você vai lidar de forma mais saudável com tudo isso.
-             Consciente, independente e de forma consistente."
+          title="Burnout"
+          description="
+          O burnout é o esgotamento emocional e físico causado pelo estresse excessivo. Nas sessões, trabalhamos juntos para identificar as causas e desenvolver estratégias para restaurar seu equilíbrio emocional."
         ></app-card>
       </li>
     </ul>
     <ul>
       <li>
         <app-card
-          title="Depressão"
-          description="Angústia profunda, baixa-autoestima, desânimo, choro frequente, traumas, tendência a suicídio, pensamentos ruins que te fazem mal, etc.
-A Depressão pode querer acabar com você, mas sua atitude de procurar ajuda pode acabar com ela, e tudo isso que está te fazendo sofrer."
+          title="Síndrome do Pânico"
+          description="
+          A síndrome do pânico envolve crises de ansiedade intensas e inesperadas. Com técnicas de reprocessamento emocional, ajudo você a entender e gerenciar os gatilhos para melhorar sua qualidade de vida."
         ></app-card>
       </li>
-      <li>
-        <app-card
-          title="Psicoterapia Existencial"
-          description="Aqui você vai ter mais autonomia e independência emocional – na
-psicoterapia você receber ajuda para lidar com os problemas da vida, compreender suas emoções e saber o que fazer diante do que se passa em sua mente."
-        ></app-card>
+        <li>
+      <app-card
+        title="Crise Conjugal"
+        description="A crise conjugal pode distanciar casais emocionalmente. Através de sessões terapêuticas, busco criar um ambiente seguro para comunicação eficaz, resgatando a conexão e fortalecendo a relação."
+      ></app-card>
       </li>
     </ul>
   </div>
