@@ -36,7 +36,6 @@ export class AboutComponent implements OnInit {
         })
     );
   }
-
   scrollToSection(section: string): void {
     const element = document.getElementById(section);
     if (element) {

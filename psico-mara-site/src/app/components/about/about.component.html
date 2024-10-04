@@ -1,4 +1,4 @@
-<section id="section1" class="home-section">
+<section id="home" class="home-section">
   <button class="whatsapp-button">
     <a
       target="_blank"
@@ -18,17 +18,13 @@
   primaryBtnText="Home"
   secondaryBtnText="Sobre"
   tertiaryBtnText="Atendimentos"
-  quaternaryBtnText="Contato"
+  quaternaryBtnText="Terapias"
   quinaryBtnText="Depoimentos"
-  senaryBtnText="Conheça a TRG"
-  septnaryBtnText="Serviços"
-  (navigate)="navigateTestimonials()"
-  (navigate)="navigateService()"
-  (navigate)="navigateBlog()"
+  senaryBtnText="Contatos"
 ></app-header>
 
 <main>
-  <div id="section2" class="apresentation-section">
+  <div id="about" class="apresentation-section">
     <div class="img-apresentantion">
       <img
         src="assets/png/apresentation-photo1.jpeg"
@@ -73,42 +69,147 @@
     </div>
   </div>
 
-  <div id="section3" class="cards-section">
-    <h2>Atendimentos</h2>
-    <ul>
-      <li>
-        <app-card
-          title="Autoestima e Autoconfiança"
-          description=
-            "Fortaleça sua autoestima e autoconfiança. Através de técnicas de autoconhecimento, você irá resgatar seu valor pessoal, desenvolver segurança para enfrentar desafios e viver com mais autenticidade."
-        ></app-card>
-      </li>
-      <li>
-        <app-card
-          title="Burnout"
-          description="
-          O burnout é o esgotamento emocional e físico causado pelo estresse excessivo. Nas sessões, trabalhamos juntos para identificar as causas e desenvolver estratégias para restaurar seu equilíbrio emocional."
-        ></app-card>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <app-card
-          title="Síndrome do Pânico"
-          description="
-          A síndrome do pânico envolve crises de ansiedade intensas e inesperadas. Com técnicas de reprocessamento emocional, ajudo você a entender e gerenciar os gatilhos para melhorar sua qualidade de vida."
-        ></app-card>
-      </li>
-        <li>
+  <div id="services" class="cards-service-section">
+    <h2>Veja alguns temas que posso te ajudar</h2>
+
+    <div class="cards">
+
       <app-card
-        title="Crise Conjugal"
-        description="A crise conjugal pode distanciar casais emocionalmente. Através de sessões terapêuticas, busco criar um ambiente seguro para comunicação eficaz, resgatando a conexão e fortalecendo a relação."
+        imagePath="assets/svg/logo.png"
+        title="Ansiedade"
+        description=
+          "Fortaleça sua autoestima e autoconfiança. Através de técnicas de autoconhecimento, você irá resgatar seu valor pessoal, desenvolver segurança para enfrentar desafios e viver com mais autenticidade."
+        buttonName="Clique aqui para saber mais"
+        path="services"
+      >
+      </app-card>
+
+      <app-card
+        imagePath="assets/svg/logo.png"
+        title="Autoestima e Autoconfiança"
+        description=
+        "Fortaleça sua autoestima e autoconfiança. Através de técnicas de autoconhecimento, você irá resgatar seu valor pessoal, desenvolver segurança para enfrentar desafios e viver com mais autenticidade."
+        buttonName="Clique aqui para saber mais"
+        path="services"
       ></app-card>
-      </li>
-    </ul>
+
+      <app-card
+        imagePath="assets/svg/logo.png"
+        title="Burnout"
+        description=
+          "O burnout é o esgotamento emocional e físico causado pelo estresse excessivo. Nas sessões, trabalhamos juntos para identificar as causas e desenvolver estratégias para restaurar seu equilíbrio emocional."
+        buttonName="Clique aqui para saber mais"
+        path="services"
+      ></app-card>
+
+      <app-card
+        imagePath="assets/svg/logo.png"
+        title="Depressão"
+        description=
+          "O burnout é o esgotamento emocional e físico causado pelo estresse excessivo. Nas sessões, trabalhamos juntos para identificar as causas e desenvolver estratégias para restaurar seu equilíbrio emocional."
+        buttonName="Clique aqui para saber mais"
+        path="services"
+      ></app-card>
+
+      <app-card
+        imagePath="assets/svg/logo.png"
+        title="Síndrome do Pânico"
+        description=
+          "A síndrome do pânico envolve crises de ansiedade intensas e inesperadas. Com técnicas de reprocessamento emocional, ajudo você a entender e gerenciar os gatilhos para melhorar sua qualidade de vida."
+        buttonName="Clique aqui para saber mais"
+        path="services"
+      ></app-card>
+
+      <app-card
+        imagePath="assets/svg/logo.png"
+        title="Crise Conjugal"
+        description=
+          "A crise conjugal pode distanciar casais emocionalmente. Através de sessões terapêuticas, busco criar um ambiente seguro para comunicação eficaz, resgatando a conexão e fortalecendo a relação."
+        buttonName="Clique aqui para saber mais"
+        path="services"
+      ></app-card>
+    </div>
   </div>
 
-  <div id="section4" class="contact-section">
+  <div id="therapy" class="cards-therapy-section">
+    <h2>Conheça as terapias aplicadas por mim</h2>
+
+    <div class="cards">
+      <app-card
+        imagePath="https://img.icons8.com/?size=100&id=zYiLBfhJTOHx&format=png&color=dbaca3"
+        title="TRG"
+        description="Clique para saber mais!"
+        buttonName="Clique aqui para saber mais"
+        path="services"
+      ></app-card>
+
+      <app-card
+        imagePath="https://img.icons8.com/?size=100&id=zYiLBfhJTOHx&format=png&color=dbaca3"
+        title="Análise Comportamental"
+        description="Clique para saber mais!"
+        buttonName="Clique aqui para saber mais"
+        path="services"
+      ></app-card>
+
+      <app-card
+        imagePath="https://img.icons8.com/?size=100&id=zYiLBfhJTOHx&format=png&color=dbaca3"
+        title="Travas Mentais"
+        description="Clique para saber mais!"
+        buttonName="Clique aqui para saber mais"
+        path="services"
+      ></app-card>
+
+      <app-card
+        imagePath="https://img.icons8.com/?size=100&id=zYiLBfhJTOHx&format=png&color=dbaca3"
+        title="Hipnoterapia"
+        description="Clique para saber mais!"
+        buttonName="Clique aqui para saber mais"
+        path="services"
+      ></app-card>
+    </div>
+  </div>
+
+  <div id="testimonials" class="cards-depoimentos-section">
+    <h2>Depoimentos de quem já transformou a sua vida</h2>
+
+    <div class="cards">
+      <app-card
+        imagePath="https://img.icons8.com/?size=100&id=93331&format=png&color=dbaca3"
+        title="TRG"
+        description="O burnout é o esgotamento emocional e físico causado pelo estresse excessivo. Nas sessões, trabalhamos juntos para identificar as causas e desenvolver estratégias para restaurar seu equilíbrio emocional."
+        buttonName="Clique aqui para saber mais"
+        path="testimonials"
+      ></app-card>
+
+      <app-card
+        imagePath="https://img.icons8.com/?size=100&id=93331&format=png&color=dbaca3"
+        title="Análise Comportamental"
+        description="O burnout é o esgotamento emocional e físico causado pelo estresse excessivo. Nas sessões, trabalhamos juntos para identificar as causas e desenvolver estratégias para restaurar seu equilíbrio emocional."
+        buttonName="Clique aqui para saber mais"
+        path="testimonials"
+      ></app-card>
+
+      <app-card
+        imagePath="https://img.icons8.com/?size=100&id=93331&format=png&color=dbaca3"
+        title="Travas Mentais"
+        description=
+          "O burnout é o esgotamento emocional e físico causado pelo estresse excessivo. Nas sessões, trabalhamos juntos para identificar as causas e desenvolver estratégias para restaurar seu equilíbrio emocional."
+        buttonName="Clique aqui para saber mais"
+        path="testimonials"
+      ></app-card>
+
+      <app-card
+        imagePath="https://img.icons8.com/?size=100&id=93331&format=png&color=dbaca3"
+        title="Hipnoterapia"
+        description="
+        O burnout é o esgotamento emocional e físico causado pelo estresse excessivo. Nas sessões, trabalhamos juntos para identificar as causas e desenvolver estratégias para restaurar seu equilíbrio emocional."
+        buttonName="Clique aqui para saber mais"
+        path="testimonials"
+      ></app-card>
+    </div>
+  </div>
+
+  <div id="contact" class="contact-section">
     <div class="writted-container">
 
       <div class="contact-container">

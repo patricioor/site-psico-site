@@ -1,19 +1,39 @@
-ul {
+button {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
   border: 2px solid #dbaca3;
-  border-radius: 20px;
   padding: 25px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   background-color: #f0e6df;
+  height: 17rem;
+  width: 13rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  h4{
+    color: #dbaca3;
+  }
   p {
+    color: #dbaca3;
+    font-size: 12px;
     text-align: justify;
   }
+
   img {
     color: white;
+    width: 70px;
+    height: 70px;
   }
+}
+button:hover {
+  background-color: #e2d5c7;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
 }
 

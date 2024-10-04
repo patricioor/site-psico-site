@@ -1,10 +1,10 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Router, RouterLink} from "@angular/router";
-import {NgOptimizedImage} from "@angular/common";
-import {MatButton} from "@angular/material/button";
-import {MatToolbar} from "@angular/material/toolbar";
-import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
-import {window} from "rxjs";
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {NavigationEnd, Router, RouterLink} from "@angular/router";
+import {NgIf, NgOptimizedImage} from "@angular/common";
+import { MatButton } from "@angular/material/button";
+import { MatToolbar } from "@angular/material/toolbar";
+import { MatMenu, MatMenuItem, MatMenuTrigger } from "@angular/material/menu";
+import {filter} from "rxjs";
 
 @Component({
   selector: 'app-header',
@@ -16,10 +16,11 @@ import {window} from "rxjs";
     MatMenuTrigger,
     MatMenu,
     MatMenuItem,
-    RouterLink
+    RouterLink,
+    NgIf
   ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   @Input() title: string = '';
@@ -34,39 +35,48 @@ export class HeaderComponent {
   @Input() septnaryBtnText: string = "";
 
   @Output("navigate") onNavigate = new EventEmitter();
-
   isMenuOpen = false;
+  isAboutPage: boolean = false;
+
+  constructor(private router: Router) {
+    // Verifica a rota atual e define isAboutPage
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: any) => {
+      this.isAboutPage = event.urlAfterRedirects === '/about';
+    });
+  }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  constructor(private router: Router) {
-  }
+  handleButtonClick(buttonId: string) {
+    const currentPath = this.router.url;
 
-  navigateHome() {
-    this.router.navigate(["home"])
+    if (currentPath === '/about') {
+      const element = document.getElementById(buttonId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      switch (buttonId) {
+        case 'home':
+          this.router.navigate(['/about']);
+          break;
+        case 'about':
+          this.router.navigate(['/about']);
+          break;
+        case 'services':
+          this.router.navigate(['/services']);
+          break;
+        case 'testimonials':
+          this.router.navigate(['/testimonials']);
+          break;
+        case 'blog':
+          this.router.navigate(['/blog']);
+          break;
+      }
+    }
   }
-
-  navigateAbout() {
-    this.router.navigate(["about"])
-  }
-
-  navigateService() {
-    this.router.navigate(["services"])
-  }
-
-  navigateTestimonials() {
-    this.router.navigate(["testimonials"])
-  }
-
-  navigateContact() {
-    this.router.navigate(["contact"])
-  }
-
-  navigateBlog() {
-    this.router.navigate(["blog"])
-  }
-
-  protected readonly window = window;
 }
