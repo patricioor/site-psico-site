@@ -33,17 +33,20 @@ export class HeaderComponent {
   @Input() quinaryBtnText: string = "";
   @Input() senaryBtnText: string = "";
   @Input() septnaryBtnText: string = "";
+  @Input() serviceTrgBtnTxt: string = "";
+  @Input() serviceAnaliseCorporalBtnText: string = "";
+  @Input() serviceTravasMentaisBtnText: string = "";
+  @Input() serviceHipnoterapiaBtnText: string = "";
 
   @Output("navigate") onNavigate = new EventEmitter();
   isMenuOpen = false;
-  isAboutPage: boolean = false;
+  isAboutPage: boolean = true;
 
   constructor(private router: Router) {
-    // Verifica a rota atual e define isAboutPage
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
-      this.isAboutPage = event.urlAfterRedirects === '/about';
+      this.isAboutPage = event.urlAfterRedirects === ('/about');
     });
   }
 
@@ -54,7 +57,7 @@ export class HeaderComponent {
   handleButtonClick(buttonId: string) {
     const currentPath = this.router.url;
 
-    if (currentPath === '/about') {
+    if (currentPath === ('/about' || '')) {
       const element = document.getElementById(buttonId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
@@ -64,17 +67,37 @@ export class HeaderComponent {
         case 'home':
           this.router.navigate(['/about']);
           break;
+
         case 'about':
           this.router.navigate(['/about']);
           break;
+
         case 'services':
           this.router.navigate(['/services']);
           break;
+
         case 'testimonials':
           this.router.navigate(['/testimonials']);
           break;
+
         case 'blog':
           this.router.navigate(['/blog']);
+          break;
+
+          case 'services/trg':
+          this.router.navigate(['/services/trg']);
+          break;
+
+        case 'services/analise-corporal':
+          this.router.navigate(['/services/analise-corporal']);
+          break;
+
+        case 'services/travas-mentais':
+          this.router.navigate(['/services/travas-mentais']);
+          break;
+
+        case 'services/hipnoterapia':
+          this.router.navigate(['/services/hipnoterapia']);
           break;
       }
     }

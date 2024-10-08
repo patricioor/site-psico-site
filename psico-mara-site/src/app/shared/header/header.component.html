@@ -10,7 +10,14 @@
         <button mat-button (click)="handleButtonClick('home')" > {{ primaryBtnText }} </button>
         <button mat-button (click)="handleButtonClick('about')"> {{ secondaryBtnText }} </button>
         <button mat-button (click)="handleButtonClick('services')"> {{ tertiaryBtnText }} </button>
-        <button mat-button (click)="handleButtonClick('therapy')"> {{ quaternaryBtnText }} </button>
+        <button mat-button *ngIf="!isAboutPage" [matMenuTriggerFor]="menu">{{ quaternaryBtnText }}</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="handleButtonClick('services/trg')"> {{ serviceTrgBtnTxt }} </button>
+          <button mat-menu-item (click)="handleButtonClick('services/analise-corporal')"> {{ serviceAnaliseCorporalBtnText }} </button>
+          <button mat-menu-item (click)="handleButtonClick('services/travas-mentais')"> {{ serviceTravasMentaisBtnText }} </button>
+          <button mat-menu-item (click)="handleButtonClick('services/hipnoterapia')"> {{ serviceHipnoterapiaBtnText }} </button>
+        </mat-menu>
+        <button mat-button *ngIf="isAboutPage" (click)="handleButtonClick('therapy')"> {{ quaternaryBtnText }} </button>
         <button mat-button (click)="handleButtonClick('testimonials')"> {{ quinaryBtnText }} </button>
         <button mat-button *ngIf="isAboutPage" (click)="handleButtonClick('contact')"> {{ senaryBtnText }} </button>
       </div>

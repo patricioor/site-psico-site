@@ -1,0 +1,24 @@
+.cards-depoimentos-section {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #dbaca3;
+  padding: 3rem;
+
+  h2 {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    background-color: #f0e6df;
+    color: #dbaca3;
+    margin-bottom: 20px;
+  }
+
+  .cards{
+    display: flex;
+    flex-direction: row;
+  }
+}
