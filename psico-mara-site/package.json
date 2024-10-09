@@ -1,10 +1,10 @@
 {
   "name": "psico-mara-site",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:psico-mara-site": "node dist/psico-mara-site/server/server.mjs"
