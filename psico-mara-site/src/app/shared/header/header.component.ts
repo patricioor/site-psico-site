@@ -1,4 +1,11 @@
-import {Component, ElementRef, EventEmitter, HostListener, Input, NgZone, Output, Renderer2} from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter, HostListener,
+  Input,
+  Output,
+  Renderer2, ViewChild,
+} from '@angular/core';
 import {NavigationEnd, Router, RouterLink} from "@angular/router";
 import {NgClass, NgIf, NgOptimizedImage} from "@angular/common";
 import { MatButton } from "@angular/material/button";
@@ -42,13 +49,27 @@ export class HeaderComponent {
   @Output("navigate") onNavigate = new EventEmitter();
   isMenuOpen = false;
   isAboutPage: boolean = true;
+  isFixed: boolean = false;
+  @ViewChild('header') header!: ElementRef
 
-  constructor(private router: Router, private el:ElementRef, private renderer: Renderer2) {
+  constructor(private router: Router) {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
       this.isAboutPage = event.urlAfterRedirects === ('/about');
     });
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    const headerPosition = this.header.nativeElement.offsetTop;
+
+    const scrollPosition = window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      window.scrollY;
+
+    this.isFixed = headerPosition < scrollPosition;
   }
 
   toggleMenu() {

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import {Component, Input, OnInit, OnDestroy, ViewChild, ElementRef} from '@angular/core';
 import { HeaderComponent } from "../../shared/header/header.component";
 import { FooterComponent } from "../../shared/footer/footer.component";
 import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
@@ -24,6 +24,7 @@ export class AboutComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+
     this.fragmentSubscription.add(
       this.router.events
         .pipe(filter(event => event instanceof NavigationEnd))

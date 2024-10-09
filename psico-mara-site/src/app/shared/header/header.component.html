@@ -1,5 +1,5 @@
-<main>
-  <section class="header-section" >
+<header>
+  <section #header [ngClass]="{'fixed': isFixed}">
     <mat-toolbar class="desktop-menu" >
       <div class="logo-header">
         <a mat-menu-item (click)="handleButtonClick('home')">
@@ -53,4 +53,4 @@
   </section>
 
   <div class="divider"><div></div></div>
-</main>
+</header>
