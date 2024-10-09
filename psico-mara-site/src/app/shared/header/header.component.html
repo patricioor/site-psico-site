@@ -1,17 +1,17 @@
 <main>
-  <section class="header-section">
-    <mat-toolbar class="desktop-menu">
+  <section class="header-section" >
+    <mat-toolbar class="desktop-menu" >
       <div class="logo-header">
-        <button mat-menu-item (click)="handleButtonClick('section1')">
+        <a mat-menu-item (click)="handleButtonClick('home')">
           <img src="assets/svg/logo1.png">
-        </button>
+        </a>
       </div>
       <div class="buttons-header">
         <button mat-button (click)="handleButtonClick('home')" > {{ primaryBtnText }} </button>
         <button mat-button (click)="handleButtonClick('about')"> {{ secondaryBtnText }} </button>
         <button mat-button (click)="handleButtonClick('services')"> {{ tertiaryBtnText }} </button>
-        <button mat-button *ngIf="!isAboutPage" [matMenuTriggerFor]="menu">{{ quaternaryBtnText }}</button>
-        <mat-menu #menu="matMenu">
+        <button mat-button *ngIf="!isAboutPage" [matMenuTriggerFor]="menuDesktop">{{ quaternaryBtnText }}</button>
+        <mat-menu #menuDesktop="matMenu">
           <button mat-menu-item (click)="handleButtonClick('services/trg')"> {{ serviceTrgBtnTxt }} </button>
           <button mat-menu-item (click)="handleButtonClick('services/analise-corporal')"> {{ serviceAnaliseCorporalBtnText }} </button>
           <button mat-menu-item (click)="handleButtonClick('services/travas-mentais')"> {{ serviceTravasMentaisBtnText }} </button>
@@ -25,23 +25,30 @@
 
     <mat-toolbar class="mobile-menu">
       <div class="logo-header">
-        <button mat-menu-item [routerLink]="['/about']" fragment="section1">
+        <a mat-menu-item (click)="handleButtonClick('home')">
           <img src="assets/svg/logo1.png">
-        </button>
+        </a>
       </div>
       <div class="menu-header">
-        <button mat-button [matMenuTriggerFor]="menu">
+        <button mat-button [matMenuTriggerFor]="menuMobile">
           <img src="https://img.icons8.com/?size=100&id=82749&format=png&color=f0e6df">
         </button>
       </div>
     </mat-toolbar>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="handleButtonClick('about')"> {{ primaryBtnText }} </button>
-      <button mat-menu-item (click)="handleButtonClick('services')"> {{ secondaryBtnText }} </button>
-      <button mat-menu-item (click)="handleButtonClick('testimonials')"> {{ tertiaryBtnText }} </button>
-      <button mat-menu-item (click)="handleButtonClick('blog')"> {{ quaternaryBtnText }} </button>
-      <button mat-menu-item (click)="handleButtonClick('section5')"> {{ quinaryBtnText }} </button>
-      <button mat-menu-item (click)="handleButtonClick('section6')"> {{ senaryBtnText }} </button>
+    <mat-menu #menuMobile="matMenu">
+      <button mat-menu-item (click)="handleButtonClick('home')" > {{ primaryBtnText }} </button>
+      <button mat-menu-item (click)="handleButtonClick('about')"> {{ secondaryBtnText }} </button>
+      <button mat-menu-item (click)="handleButtonClick('services')"> {{ tertiaryBtnText }} </button>
+      <button mat-menu-item *ngIf="isAboutPage" (click)="handleButtonClick('therapy')"> {{ quaternaryBtnText }} </button>
+      <button mat-menu-item *ngIf="!isAboutPage" [matMenuTriggerFor]="menuTerapia">{{ quaternaryBtnText }}</button>
+      <mat-menu #menuTerapia="matMenu">
+        <button mat-menu-item (click)="handleButtonClick('services/trg')"> {{ serviceTrgBtnTxt }} </button>
+        <button mat-menu-item (click)="handleButtonClick('services/analise-corporal')"> {{ serviceAnaliseCorporalBtnText }} </button>
+        <button mat-menu-item (click)="handleButtonClick('services/travas-mentais')"> {{ serviceTravasMentaisBtnText }} </button>
+        <button mat-menu-item (click)="handleButtonClick('services/hipnoterapia')"> {{ serviceHipnoterapiaBtnText }} </button>
+      </mat-menu>
+      <button mat-menu-item (click)="handleButtonClick('testimonials')"> {{ quinaryBtnText }} </button>
+      <button mat-menu-item *ngIf="isAboutPage" (click)="handleButtonClick('contact')"> {{ senaryBtnText }} </button>
     </mat-menu>
   </section>
 

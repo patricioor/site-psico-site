@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {Component, ElementRef, EventEmitter, HostListener, Input, NgZone, Output, Renderer2} from '@angular/core';
 import {NavigationEnd, Router, RouterLink} from "@angular/router";
-import {NgIf, NgOptimizedImage} from "@angular/common";
+import {NgClass, NgIf, NgOptimizedImage} from "@angular/common";
 import { MatButton } from "@angular/material/button";
 import { MatToolbar } from "@angular/material/toolbar";
 import { MatMenu, MatMenuItem, MatMenuTrigger } from "@angular/material/menu";
@@ -17,7 +17,8 @@ import {filter} from "rxjs";
     MatMenu,
     MatMenuItem,
     RouterLink,
-    NgIf
+    NgIf,
+    NgClass
   ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
@@ -42,7 +43,7 @@ export class HeaderComponent {
   isMenuOpen = false;
   isAboutPage: boolean = true;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private el:ElementRef, private renderer: Renderer2) {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
