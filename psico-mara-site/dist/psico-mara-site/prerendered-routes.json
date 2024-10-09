@@ -1,0 +1,12 @@
+{
+  "routes": [
+    "/about",
+    "/blog",
+    "/services",
+    "/services/analise-corporal",
+    "/services/hipnoterapia",
+    "/services/travas-mentais",
+    "/services/trg",
+    "/testimonials"
+  ]
+}
